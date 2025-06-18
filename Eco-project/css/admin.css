@@ -1,0 +1,219 @@
+<?php
+// Admin CSS for additional admin-specific styling
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 250px;
+    background-color: #212529;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    transition: all 0.3s;
+    overflow-y: auto;
+}
+
+.admin-content {
+    flex: 1;
+    margin-left: 250px;
+    transition: all 0.3s;
+}
+
+/* Admin sidebar styles */
+.admin-sidebar-brand {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar-brand a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.admin-sidebar-brand span {
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.admin-sidebar-nav {
+    padding: 15px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.admin-sidebar-nav .nav-item {
+    margin-bottom: 5px;
+}
+
+.admin-sidebar-nav .nav-link {
+    padding: 10px 15px;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.admin-sidebar-nav .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.admin-sidebar-nav .nav-link:hover,
+.admin-sidebar-nav .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Admin header styles */
+.admin-header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.admin-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Admin content styles */
+.admin-content .container-fluid {
+    padding: 20px;
+}
+
+/* Admin card styles */
+.admin-card {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.admin-card-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f9fa;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.admin-card-body {
+    padding: 20px;
+}
+
+/* Admin table styles */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    text-align: left;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Admin form styles */
+.admin-form-group {
+    margin-bottom: 20px;
+}
+
+.admin-form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.admin-form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Admin product thumbnail */
+.admin-product-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .admin-sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .admin-content {
+        margin-left: 0;
+    }
+    
+    .sidebar-toggle {
+        display: block;
+    }
+}
+
+/* Dashboard stats cards */
+.stats-card {
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.stats-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.stats-card-content h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.stats-card-content p {
+    margin-bottom: 0;
+    color: #777;
+}
